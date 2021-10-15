@@ -1,0 +1,648 @@
+<!--
+Уважаемые разработчики НИРУП "ИППС" и Министерства Юстиции,
+я очень поражен тем количеством "мусорного кода", который я здесь нашел,
+чтобы вы наглядно понимали, когда я скачал главную страницу сайта в ней было 1019 (или даже больше) строк,
+а сейчас здесь 629 строк без учета этого комментария, я убрал мусор и устаревшее в плане UI, выводы делайте сами.
+
+P.S Если хотите сделать нормальный сайт то обратитесь к НОРМАЛЬНЫМ айтишникам а не к государственному говну
+
+-- li0ard
+
+Паважаныя распрацоўшчыкі НІРУП "ИППС" і Міністэрства Юстыцыі,
+я вельмі здзіўлены тым колькасцю "смеццевага кода", які я тут знайшоў,
+каб вы наглядна разумелі, калі я запампаваў галоўную старонку сайта ў ёй было 1019 (ці нават больш) радкоў,
+а цяпер тут 629 радкоў без уліку гэтага каментара, я прыбраў смецце і састарэлае ў плане UI, высновы рабіце самі.
+
+P.S Калі хочаце зрабіць нармальны сайт то звярніцеся да нармальных айцішнікаў а не да дзяржаўнага говна
+
+-- li0ard
+-->
+<html lang="ru" class="js">
+    <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+        <meta charset="utf-8" />
+
+        <link type="text/css" rel="stylesheet" href="https://egr.gov.by/egrn/index.css" />
+        <link type="text/css" rel="stylesheet" href="https://egr.gov.by/egrn/havingPoorVision/css/style.css" />
+        <link rel="shortcut icon" href="https://egr.gov.by/egrn/favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="https://egr.gov.by/egrn/menu.css" />
+        <link type="text/css" rel="stylesheet" href="https://egr.gov.by/egrn/scripts/pages/news-latest/css/app.49dafe92.css" />
+
+        <script src="https://egr.gov.by/egrn/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+        <script src="https://egr.gov.by/egrn/js/jquery.cookie.js" type="text/javascript"></script>
+        <script src="https://egr.gov.by/egrn/havingPoorVision/js/scriptForHavingPoorVision.js" type="text/javascript"></script>
+
+        <style>
+            * {
+                font-family: "Roboto", sans-serif;
+            }
+            .left-col {
+                padding: 20px;
+                -webkit-box-shadow: #999 2px 2px 10px;
+                -moz-box-shadow: #999 2px 2px 10px;
+                box-shadow: #999 2px 2px 10px;
+            }
+
+            .button-p {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                padding-top: 6px;
+            }
+
+            .box_start i {
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            .box_start {
+                font-size: 14px;
+                margin-bottom: 15px;
+                height: 130px;
+                width: 32%;
+            }
+            .box_start a {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                height: 130px;
+                padding: 10px;
+                color: #fff;
+                text-align: center;
+                vertical-align: middle;
+                text-transform: uppercase;
+                box-sizing: border-box;
+                background: linear-gradient(to bottom, rgb(65, 143, 203) 10%, rgb(24, 119, 194) 100%);
+                box-shadow: #999 2px 2px 10px;
+                border: 1px solid grey;
+            }
+
+            .box_start:hover a {
+                background: #fff;
+                color: #3588c9;
+                text-decoration: none;
+            }
+
+            .div_text {
+                width: 100%;
+            }
+            .box_start:hover a b {
+                color: #9c02cc;
+                font-size: 17px;
+            }
+
+            .box_start a b {
+                font-size: 17px;
+            }
+            /*Popup Window*/
+            .header {
+                height: 245px;
+                padding: 30px 0;
+            }
+
+            .header [class*="col-"] {
+                height: 100%;
+                position: relative;
+            }
+
+            .header [class*="col-"]:nth-child(odd) *,
+            .header .col-1-2 a {
+                position: absolute;
+                top: 50%;
+                left: 43%;
+                transform: translate(-50%, -50%);
+            }
+
+            .header [class*="col-"]:nth-child(2) {
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            .header [class*="col-"]:nth-child(2) a {
+                color: #fff;
+                text-transform: uppercase;
+                white-space: nowrap;
+            }
+
+            .header .col-1-2 a:hover {
+                text-decoration: none;
+            }
+
+            .header .col-1-2 a p {
+                margin: 0;
+            }
+
+            .header .col-1-2 a p:nth-child(2) {
+                font-size: 30px;
+                margin: 10px 0;
+            }
+
+            .header .align-right {
+                float: right;
+                white-space: nowrap;
+            }
+
+            .header [class*="col-"]:last-child .right-container {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+
+            .header [class*="col-"]:last-child .right-container:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .header [class*="col-"]:last-child div div:not(:first-child) {
+                margin-top: 25px;
+            }
+
+            .header [class*="col-"]:last-child a {
+                color: #fff;
+                text-transform: uppercase;
+            }
+
+            .icon {
+                font-size: 20px;
+                padding-left: 10px;
+                cursor: pointer;
+            }
+
+            .icon:hover {
+                text-decoration: none;
+            }
+
+            .black_overlay5 {
+                display: none;
+                position: fixed;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                z-index: 1001;
+                -moz-opacity: 0.6;
+                opacity: 0.6;
+                filter: alpha(opacity = 60);
+            }
+
+            .white_content5 {
+                display: none;
+                position: fixed;
+                top: 45%;
+                left: 40%;
+                width: 20%;
+                padding: 16px;
+                border: 16px solid orange;
+                background-color: white;
+                z-index: 1002;
+                overflow: auto;
+            }
+
+            .align-right {
+                text-align: right;
+            }
+
+            .selectLanguage {
+                font-size: 14px;
+                color: white;
+                padding-left: 10px;
+            }
+            .selectLanguage:hover {
+                font-size: 14px;
+                color: white;
+            }
+
+            #auth-id-card {
+                white-space: nowrap;
+                text-transform: uppercase;
+                color: #fff;
+            }
+            #auth-id-card:hover {
+                cursor: pointer;
+            }
+
+            #authorization {
+                position: relative;
+            }
+
+            #authorization div {
+                position: absolute;
+                display: none;
+                bottom: 0;
+                right: 128;
+                width: 700px;
+                padding: 16px;
+                background-color: #fff;
+                border: 1px solid #000;
+                border-radius: 4px;
+            }
+
+            #authorization a:hover + div,
+            #authorization div:hover {
+                display: block;
+            }
+
+            #authorization div p {
+                white-space: normal;
+                margin: 0;
+                text-align: left;
+            }
+
+            #authorization div p a {
+                color: #167cc4;
+                text-transform: capitalize;
+            }
+            #borderBottomMenu {
+                margin: 25px;
+            }
+
+            .main-menu {
+                height: 85px;
+            }
+
+            .simple-menu {
+                height: 100px;
+            }
+
+            .simple-menu .sub-menu {
+                z-index: 1000;
+            }
+
+            .old-menu {
+                height: 85px;
+            }
+        </style>
+        <title>Портал ЕГР</title>
+        <script type="text/javascript">
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() != 0) {
+                        $("#toTop").fadeIn();
+                    } else {
+                        $("#toTop").fadeOut();
+                    }
+                });
+
+                $("#toTop").click(function () {
+                    $("body,html").animate(
+                        {
+                            scrollTop: 0,
+                        },
+                        800
+                    );
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="visually-impaired" class="visually-impaired">
+            <div class="container">
+                <div class="col">
+                    <p>Размер шрифта</p>
+                    <div>
+                        <div id="small-font" class="button small-font" title="Маленький шрифт">A</div>
+                        <div id="medium-font" class="button medium-font" title="Средний шрифт">A</div>
+                        <div id="big-font" class="button big-font" title="Большой шрифт">A</div>
+                    </div>
+                    <p id="inf-font"></p>
+                </div>
+                <div class="col">
+                    <p>Цвет сайта</p>
+                    <div>
+                        <div id="white-style" class="button white-style" title="Черным по белому">A</div>
+                        <div id="black-style" class="button black-style" title="Белым по черному">A</div>
+                        <div id="blue-style" class="button blue-style" title="Темно-синим по голубому">A</div>
+                        <div id="green-style" class="button green-style" title="Зеленым по темно-коричневому">A</div>
+                    </div>
+                    <p id="inf-style"></p>
+                </div>
+                <div class="col">
+                    <p>Изображения</p>
+                    <div>
+                        <div id="imgs" class="button">
+                            <i class="far fa-image fa-lg"></i>
+                        </div>
+                    </div>
+                    <p id="inf-img"></p>
+                </div>
+                <div class="col">
+                    <p>Дополнительно</p>
+                    <div>
+                        <div id="off-visually-impaired" class="button">
+                            <i class="fas fa-eye-slash fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container" class="container">
+            <div id="header">
+                <div class="grid header">
+                    <div class="col-1-4">
+                        <img src="https://egr.gov.by/egrn/images/newgerb2.png" style="width: 120px;" />
+                    </div>
+                    <div class="col-1-2">
+                        <a href="#">
+                            <p>Министерство юстиции Республики Беларусь</p>
+                            <p><b>Единый государственный регистр</b></p>
+                            <p><b>юридических лиц и индивидуальных предпринимателей</b></p>
+                        </a>
+                    </div>
+                    <div class="col-1-8">
+                        <a href="#">
+                            <img src="https://egr.gov.by/egrn/images/456.png" />
+                        </a>
+                    </div>
+                    <div class="col-1-8">
+                        <div class="right-container">
+                            <div class="align-right">
+                                <a class="selectLanguage" href="#">РУС</a>
+                                <a class="selectLanguage" href="#">БЕЛ</a>
+                                <a class="selectLanguage" href="#">ENG</a>
+                            </div>
+                            <div class="align-right">
+                                <a id="poor-vision" class="icon">
+                                    <i class="fas fa-eye fa-flip-horizontal"></i>
+                                </a>
+                                <a class="icon" href="#">
+                                    <i class="fas fa-home" title="На главную страницу"></i>
+                                </a>
+                                <a class="icon" href="#">
+                                    <i class="fas fa-sitemap" title="Карта сайта"></i>
+                                </a>
+                                <a class="icon" href="#">
+                                    <i class="far fa-envelope" title="Оставить предложения или замечания о работе веб-портала ЕГР"></i>
+                                </a>
+                            </div>
+                            <div class="align-right">
+                                <a href="#">
+                                    Авторизация
+                                    <i class="fas fa-key"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="fade5" class="black_overlay5"></div>
+            </div>
+            <div id="sidebar">
+                <div id="simple-menu" class="menu" style="display: none;">
+                    <ul class="simple-menu main-menu">
+                        <li class="item-main-menu"><a href="#">Согласование наименования юридического лица</a></li>
+                        <li class="item-main-menu">
+                            <a href="index.jsp?content=#">Порядок создания юридического лица</a>
+                        </li>
+                        <li class="item-main-menu">
+                            <a href="#">Порядок регистрации индивидуального предпринимателя</a>
+                        </li>
+                        <li class="item-main-menu">
+                            <a href="#">Ликвидация бизнеса</a>
+                        </li>
+                        <li class="item-main-menu"><a href="#">Предоставление информации из ЕГР</a></li>
+                        <li class="item-main-menu"><a href="#">Это интересно</a></li>
+                    </ul>
+                </div>
+                <div id="main-menu" class="old-menu">
+                    <ul id="sdt_menu" class="sdt_menu">
+                        <li>
+                            <a href="i#">
+                                <span class="sdt_wrap" style="top: 25px;"> <span class="sdt_link" style="text-align: center; margin-top: -10px;">Согласование наименования ЮЛ</span> <span class="sdt_descr"></span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="sdt_wrap" style="top: 25px;"> <span class="sdt_link" style="text-align: center; margin-top: -10px;">Порядок создания юридического лица</span> <span class="sdt_descr"></span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="sdt_wrap" style="top: 25px;"> <span class="sdt_link" style="text-align: center; margin-top: -10px;">Порядок регистрации ИП</span> <span class="sdt_descr"></span> </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="sdt_wrap" style="top: 25px;"> <span class="sdt_link" style="text-align: center; margin-top: -10px;">Ликвидация бизнеса</span> <span class="sdt_descr"></span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="sdt_wrap" style="top: 25px;"> <span class="sdt_link" style="text-align: center; margin-top: -10px;">Предоставление информации из ЕГР</span> <span class="sdt_descr"></span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="sdt_wrap" style="top: 25px;"> <span class="sdt_link" style="text-align: center; margin-top: -10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Это интересно</span> <span class="sdt_descr"></span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div></div>
+            </div>
+            <div id="content" class="content">
+                <div class="grid">
+                    <div class="col-2-3">
+                        <div class="left-col">
+                            <h2 class="text-h">УВАЖАЕМЫЙ ПОЛЬЗОВАТЕЛЬ!</h2>
+                            <div class="text">
+                                <div class="text-p">
+                                    Вас приветствует <b>министерство юстиции</b> и предлагает Вам воспользоваться следующими <b class="fiol_b">возможностями</b> веб-портала Единого государственного регистра юридических лиц и индивидуальных
+                                    предпринимателей (веб-портал ЕГР)
+                                </div>
+                            </div>
+                            <div class="text">
+                                <div class="button-p">
+                                    <div class="box_start">
+                                        <a href="#">
+                                            <i class="far fa-id-badge"></i>
+                                            <div class="div_text">
+                                                Согласовать <br />
+                                                наименование <b>ЮЛ</b>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box_start">
+                                        <a href="#">
+                                            <i class="fas fa-street-view"></i>
+                                            <div class="div_text">
+                                                Проверить статус субъекта хозяйствования
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box_start">
+                                        <a href="#">
+                                            <i class="far fa-id-card"></i>
+                                            <div class="div_text">
+                                                запросить <br />
+                                                информацию из ЕГР
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box_start">
+                                        <a href="#">
+                                            <i class="fas fa-users"></i>
+                                            <div class="div_text">Создать <b>ЮЛ</b></div>
+                                        </a>
+                                    </div>
+                                    <div class="box_start">
+                                        <a href="#">
+                                            <i class="fas fa-user-plus"></i>
+                                            <div class="div_text">
+                                                Зарегистрироваться <br />
+                                                в качестве <b>ИП</b>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box_start">
+                                        <a href="#">
+                                            <i class="fas fa-map-marked-alt"></i>
+                                            <div class="div_text">Уведомить регистрирующий орган об изменении местонахождения <b>ЮЛ</b></div>
+                                        </a>
+                                    </div>
+                                    <div class="box_start">
+                                        <a href="#">
+                                            <i class="fas fa-users-cog"></i>
+                                            <div class="div_text">
+                                                Уведомить регистрирующий орган о назначении (замене) руководителя
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="box_start">
+                                        <a href="#">
+                                            <i class="fas fa-user-alt-slash"></i>
+                                            <div class="div_text">Начать процедуру ликвидации ЮЛ или прекращения деятельности <b>ИП</b></div>
+                                        </a>
+                                    </div>
+                                    <div class="box_start">
+                                        <a href="#">
+                                            <i class="fas fa-book"></i>
+                                            <div class="div_text">
+                                                Получить информацию <br />
+                                                из ЕГР с использованием <br />
+                                                API-протокола
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <div class="text-p">
+                                    <a id="ps2" href="#">Отдельные возможности</a>
+                                    веб-портала ЕГР <b>не распространяются</b> на
+                                    <a id="ps1" href="#">следующих субъектов хозяйствования</a>
+                                </div>
+                                <div id="PopUpWinDuty2" class="PopUpWinDuty">
+                                    <ul class="custom-list">
+                                        <li>Согласование наименования юридического лица;</li>
+                                        <li>Государственная регистрация юридического лица;</li>
+                                        <li>Внесение изменений в учредительный документ юридического лица;</li>
+                                        <li>Уведомление регистрирующего органа об изменении местонахождения юридического лица или о назначении (замене) его руководителя ;</li>
+                                        <li>Ликвидация юридического лица.</li>
+                                    </ul>
+                                </div>
+                                <div id="PopUpWinDuty" class="PopUpWinDuty">
+                                    <ul class="custom-list">
+                                        <li>банки, небанковские кредитно-финансовые организации (Национальный банк Республики Беларусь);</li>
+                                        <li>страховые организации, страховые брокеры, объединения страховщиков (Министерство финансов Республики Беларусь);</li>
+                                        <li>коллегии адвокатов, адвокатские бюро, организации, обеспечивающие проведение медиации (Министерство юстиции Республики Беларусь);</li>
+                                        <li>
+                                            фонды, общественные объединения, их союзы (ассоциации), союзы (ассоциации) по виду (видам) спорта, созданные с участием общественного объединения (общественных объединений) (Министерство юстиции
+                                            Республики Беларусь или главные управления юстиции облисполкомов, Минского горисполкома);
+                                        </li>
+                                        <li>республиканские государственно-общественные объединения, третейские суды, политические партии (Министерство юстиции Республики Беларусь);</li>
+                                        <li>религиозные организации (Уполномоченный по делам религий и национальностей);</li>
+                                        <li>Палата налоговых консультантов, Белорусская нотариальная палата (Министерство юстиции Республики Беларусь).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-3">
+                        <div class="news">
+                            <div data-v-1bee269c="" id="app">
+                                <h5 data-v-1bee269c="" class="title">Новости</h5>
+                                <ul data-v-1bee269c="" class="news-list">
+                                    <li data-v-1bee269c="" class="news-list__item">
+                                        <a data-v-6d686c22="" data-v-1bee269c="" href="?content=news&amp;id=147" class="news-card" datepublic="31.08.2021">
+                                            <h2 data-v-6d686c22="" class="news-card__title">Внимание!</h2>
+                                            <p data-v-6d686c22="" class="news-card__entry-speech">Изменились формы заявлений (уведомлений), представляемых в регистрирующие органы</p>
+                                            <p data-v-6d686c22="" class="news-card__more">Подробнее</p>
+                                        </a>
+                                    </li>
+                                    <li data-v-1bee269c="" class="news-list__item">
+                                        <a data-v-6d686c22="" data-v-1bee269c="" href="?content=news&amp;id=146" class="news-card" datepublic="05.08.2021">
+                                            <h2 data-v-6d686c22="" class="news-card__title">О государственной регистрации субъектов хозяйствования</h2>
+                                            <p data-v-6d686c22="" class="news-card__entry-speech">
+                                                За семь месяцев 2021 года в Беларуси зарегистрировано 25477 субъектов хозяйствования (5511 юридических лиц и 19966 индивидуальных предпринимателей)
+                                            </p>
+                                            <p data-v-6d686c22="" class="news-card__more">Подробнее</p>
+                                        </a>
+                                    </li>
+                                    <li data-v-1bee269c="" class="news-list__item">
+                                        <a data-v-6d686c22="" data-v-1bee269c="" href="?content=news&amp;id=144" class="news-card" datepublic="15.07.2021">
+                                            <h2 data-v-6d686c22="" class="news-card__title">Воспользуйтесь новыми опциями портала ЕГР!</h2>
+                                            <p data-v-6d686c22="" class="news-card__entry-speech">Уважаемые пользователи! Рады сообщить о реализации на портале новых возможностей.</p>
+                                            <p data-v-6d686c22="" class="news-card__more">Подробнее</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a data-v-1bee269c="" href="#"> Все новости </a>
+                            </div>
+                        </div>
+                        <div align="center">
+                            <div class="box">
+                                <a href="#">Ограничения для вступающих в бизнес!</a>
+                            </div>
+                            <div class="box">
+                                <a href="#">
+                                    Подготовка документов <br />
+                                    (для представления документов <br />
+                                    на бумаге)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="footer2">
+                    <div class="grid no-pad">
+                        <div align="center" class="col-1-3">
+                            <div class="box">
+                                <a href="#">Помощь в работе с веб-порталом ЕГР</a>
+                            </div>
+                        </div>
+                        <div align="center" class="col-1-3">
+                            <div class="box">
+                                <a href="#">Оставить предложения или замечания о работе веб-портала ЕГР</a>
+                            </div>
+                        </div>
+                        <div align="center" class="col-1-3">
+                            <div class="box">
+                                <a href="#">Определите свой регистрирующий орган</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div style="font-family: 'Roboto', sans-serif;">2011-2020 © НИРУП "ИППС"&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Ремейк by li0ard</div>
+            </div>
+            <div id="toTop" style="display: none; font-family: Roboto, sans-serif;">
+                НАВЕРХ
+            </div>
+        </div>
+    </body>
+</html>
