@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+		<link rel="SHORTCUT ICON" href="http://btib.org/favicon.ico" />
+		<title>Белорусское Бюро по Транспортному Страхованию</title>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<nav class="navbar navbar-light bg-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#"><i class="far fa-steering-wheel d-inline-block align-text-top"></i>&nbsp;&nbsp;{{ title }}</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#" onclick="app.translate('RU')">Русский</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#" onclick="app.translate('EN')">English</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#">{{ about }}</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ documents }}</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+									<li><a class="dropdown-item" href="#">{{ normative_docs }}</a></li>
+									<li><a class="dropdown-item" href="#">{{ edogovor_doc }}</a></li>
+									<li><a class="dropdown-item" href="#">{{ dtp_without_gai }}</a></li>
+									<li><a class="dropdown-item" href="#">{{ for_guests }}</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ insurance }}</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<li><a class="dropdown-item" href="#">{{ insurance_orgs }}</a></li>
+									<li><a class="dropdown-item" href="#">{{ eevroprotocol }}</a></li>
+									<li><a class="dropdown-item" href="#">{{ osgovts }}</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ services }}</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+									<li><a class="dropdown-item" href="#">{{ osgovts_service }}</a></li>
+									<li><a class="dropdown-item" href="#">{{ reestr_otsenschikov }}</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<center>
+				<br />
+				<br />
+				<div class="accordion" id="accordionExample" style="width: 55%;">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingOne">
+							<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								
+							</button>
+						</h2>
+						<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<p class="card-text">{{ mainText }}</p>
+								<p align="right">
+									<i>{{ glava }}<b>{{ avseyko }}</b></i>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>
+				<h3>{{ news }}</h3>
+				<br>
+				<ul class="list-group" style="width: 85%; height: 50vh;">
+					<li class="list-group-item" style=" overflow-y: scroll;">
+						<ul class="list-group" style="width: 80%;">
+							<li class="list-group-item">ВНИМАНИЕ!!! В связи с неблагоприятной эпидемиологической обстановкой ВСЕ обращения Белорусским бюро принимаются ДИСТАНЦИОННО!!!</li>
+							<br>
+							<li class="list-group-item">В подсистеме по заключению договоров внутреннего страхования в электронном виде доступен выбор языка интерфейса (белорусский и русский языки). - 11.05.2020</li>
+							<br>
+							<li class="list-group-item">Извещение о дорожно-транспортном происшествии («европротокол») можно оформить в электронном виде. - 01.04.2020</li>
+							<br>
+							<li class="list-group-item">ТЕСТ 1</li>
+							<br>
+							<li class="list-group-item">ТЕСТ 2</li>
+						</ul>
+					</li>
+				</ul>
+				<footer class="footer">
+					<br>
+					<div class="container">
+						<span>Remaked by li0ard</span>
+					</div>
+				</footer>
+			</center>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<script>
+			var app = new Vue({
+				el: "#app",
+				methods: {
+					translate(langType) {
+						if (langType == "RU") {
+							this.title = "Белорусское Бюро по Транспортному Страхованию";
+							this.about = "О бюро";
+							this.documents = "Документы";
+							this.contacts = "Контакты";
+							this.insurance = "Страхование";
+							this.services = "Сервисы";
+
+							this.normative_docs = "Нормативные документы";
+							this.eevroprotocol = "Электронный европротокол";
+							this.edogovor_doc = "Порядок оформления договоров внутреннего страхования в электронном виде";
+							this.dtp_without_gai = "Порядок и условия оформления ДТП без участия сотрудников ГАИ";
+							this.for_guests = "Памятка для въезжающих в РБ";
+							this.insurance_orgs = "Страховые организации";
+							this.osgovts = "Комплексное внутреннее страхование";
+							this.osgovts_service = "Проверка наличия действующего договора ОСГОВТС";
+							this.reestr_otsenschikov = "Реестр аттестованных оценщиков";
+
+							this.glava = "Глава бюро - "
+							this.avseyko = "Антон Авсейко"
+							this.mainText = `Предметом деятельности Белорусского бюро является организация проведения данного вида страхования на территории Республики Беларусь, представление интересов Республики Беларусь в международной системе «Зеленая карта», осуществление контроля за выполнением страховщиками — членами Белорусского бюро, принятых на себя обязательств, координация деятельности заинтересованных, разработка инструкций и разъяснений по данному виду страхования, а также осуществление расчетов в случаях причинения вреда владельцем транспортного средства, не застраховавшим свою гражданскую ответственность, либо транспортным средством, вышедшим из обладания владельца в результате противоправных действий третьих лиц, а также в случаях причинения вреда жизни или здоровью неустановленным транспортным средством.`
+
+							this.news = "Новости"
+						} else if (langType == "EN") {
+							this.title = "Belarussian Transport Insurance Bureau";
+							this.about = "About Bureau";
+							this.documents = "Documents";
+							this.contacts = "Contacts";
+							this.insurance = "Insurance";
+							this.services = "Services";
+
+							this.normative_docs = "Regulations";
+							this.eevroprotocol = "e-Europrotocol";
+							this.edogovor_doc = "The procedure for registration of contracts of internal insurance in electronic form";
+							this.dtp_without_gai = "The procedure and conditions for registration of an accident without the participation of traffic police officers";
+							this.for_guests = "Memo for those entering the Republic of Belarus";
+							this.insurance_orgs = "Insurance organizations";
+							this.osgovts = "Comprehensive internal insurance";
+							this.osgovts_service = "Checking the existence of a valid domestic insurance contract";
+							this.reestr_otsenschikov = "Register of certified appraisers";
+
+							this.glava = "Head of Bureau - "
+							this.avseyko = "Anton Avseyko"
+							this.mainText = `The subject of activities of the Belarusian Bureau is the organization of this type of insurance on the territory of the Republic of Belarus, representing the interests of the Republic of Belarus in the international system "Green Card", monitoring the implementation of the obligations assumed by insurers - members of the Belarusian Bureau, coordinating the activities of interested parties, developing instructions and clarifications for this type of insurance, as well as making settlements in cases of harm caused by the owner of a vehicle who has not insured his civil liability, or by a vehicle that has left the owner's possession as a result of unlawful actions of third parties, as well as in cases of harm to life or health by an unidentified vehicle ...`
+							this.news = "News"
+						}
+					},
+				},
+				data: {
+					title: "Белорусское Бюро по Транспортному Страхованию",
+					about: "О Бюро",
+					documents: "Документы",
+					contacts: "Контакты",
+					insurance: "Страхование",
+					services: "Сервисы",
+
+					normative_docs: "Нормативные Документы",
+					eevroprotocol: "Электронный европротокол",
+					edogovor_doc: "Порядок оформления договоров внутреннего страхования в электронном виде",
+					dtp_without_gai: "Порядок и условия оформления ДТП без участия сотрудников ГАИ",
+					for_guests: "Памятка для въезжающих в РБ",
+					insurance_orgs: "Страховые организации",
+					osgovts: "Комплексное внутреннее страхование",
+					osgovts_service: "Проверка наличия действующего договора ОСГОВТС",
+					reestr_otsenschikov: "Реестр аттестованных оценщиков",
+					glava: "Глава бюро - ",
+					avseyko: "Антон Авсейко",
+					mainText: `Предметом деятельности Белорусского бюро является организация проведения данного вида страхования на территории Республики Беларусь, представление интересов Республики Беларусь в международной системе «Зеленая карта», осуществление контроля за выполнением страховщиками — членами Белорусского бюро, принятых на себя обязательств, координация деятельности заинтересованных, разработка инструкций и разъяснений по данному виду страхования, а также осуществление расчетов в случаях причинения вреда владельцем транспортного средства, не застраховавшим свою гражданскую ответственность, либо транспортным средством, вышедшим из обладания владельца в результате противоправных действий третьих лиц, а также в случаях причинения вреда жизни или здоровью неустановленным транспортным средством.`,
+					news: "Новости"
+				},
+			});
+		</script>
+	</body>
+</html>
